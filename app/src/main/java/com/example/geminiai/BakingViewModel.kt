@@ -17,13 +17,13 @@ class BakingViewModel : ViewModel() {
         _uiState.asStateFlow()
 
     private val generativeModel = GenerativeModel(
-        modelName = "gemini-pro-version",
+        modelName = "gemini-1.5-flash",
         apiKey = BuildConfig.apiKey
     )
 
     fun sendPrompt(
         prompt: String,
-        prompt1: String
+
     ) {
         _uiState.value = UiState.Loading
 
